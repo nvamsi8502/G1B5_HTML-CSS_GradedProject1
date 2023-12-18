@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Test Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    #form-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+      color: #333;
+    }
+    input, select {
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    .image-container {
+      flex: 0 0 300px;
+      overflow-y: scroll;
+      padding: 20px;
+      box-sizing: border-box;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    button {
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="form-container">
+    <form id="labTestForm">
+      <h2>Your Contact Details</h2>
+      <label>Full Name</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Enter full name" required>
+      <label>Patient Id</label>
+      <input type="text" id="patientId" name="patientId" placeholder="Enter patient ID">
+      <label>Contact Number</label>
+      <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter contact number" required>
+      <label>Email Id</label>
+      <input type="email" id="emailId" name="emailId" placeholder="Enter email ID" required>
+
+      <h2>Address</h2>
+      <label>House Number</label>
+      <input type="text" id="housenumber" name="housenumber" placeholder="Enter House Number" required>
+      <label>Street</label>
+      <input type="text" id="street" name="street" placeholder="Enter the Street No">
+      <label>Area</label>
+      <input type="area" id="area" name="area" placeholder="Enter the area" required>
+      <label>District</label>
+      <select id="district" name="district">
+        <option value="">Choose</option>
+        <!-- Add other district options here -->
+      </select>
+
+      <h2>Choose the Test Type</h2>
+      <label>Check at least one box without fail</label>
+      <label><input type="checkbox" name="testType" value="CBC">CBC</label>
+      <label><input type="checkbox" name="testType" value="CompleteUrine">Complete Urine</label>
+      <label><input type="checkbox" name="testType" value="LipidProfile">Lipid Profile</label>
+      <label><input type="checkbox" name="testType" value="TSH">Thyroid Stimulating Hormone(TSH)</label>
+      <label><input type="checkbox" name="testType" value="GlucoseTest">Glucose Test</label>
+
+      <h2>Do you want a hard copy of the report also?</h2>
+      <label><input type="radio" name="hardCopy" value="Yes">Yes</label>
+      <label><input type="radio" name="hardCopy" value="No">No</label>
+
+      <h2>Select Your Comfortable Date and Time</h2>
+      <label>Date: <input type="date" name="testDate"></label>
+      <label>Time: <input type="time" name="testTime"></label>
+
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="image-container">
+    <!-- Your image goes here -->
+    <img src="C:\Users\Testbook\Downloads\Images fot HTML Assignment\Images\Lab-Test\lab-test.jpg" alt="Image">
+  </div>
+</body>
+</html>
